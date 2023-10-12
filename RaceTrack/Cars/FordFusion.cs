@@ -3,32 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace RaceTrack.RaceTrack.Cars
 {
-    public class Tractor : RaceCar
+    public class FordFusion : RaceCar
     {
-        public Tractor()
+        public FordFusion()
         {
-            Name = "Tractor";
-            TopSpeed = 20;
+            Name = "Ford Fusion";
+            TopSpeed = 70;
         }
 
         public override void StartEngine()
         {
-            Console.WriteLine($"The {Name} struggles to start");
+            Console.WriteLine($"The {Name} motor turned over");
         }
 
         public override void Brake()
         {
-            Console.WriteLine($"The {Name} is having a hard time stopping!");
+            Console.WriteLine($"The {Name} screeches their brakes!");
             base.Brake();
         }
 
-        //Added
         public override void StopEngine()
         {
-            Console.WriteLine($"The {Name} engine grinds to a halt!");
+            Console.WriteLine($"The {Name} engine cuts off!");
         }
     }
 }
